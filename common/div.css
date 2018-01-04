@@ -1,0 +1,65 @@
+@charset "UTF-8";
+
+.container {
+	margin-top: 100px;
+	margin-bottom: 50px;
+	margin-left: 5%;
+	margin-right: 5%;
+	align: center;
+}
+
+.float-left {
+	float: left;
+}
+
+.float-right {
+	float: right;
+}
+
+.clearfix:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.menu {
+	position: fixed;
+	top: 80;;
+	left: 20;
+	background-color: #fffffff;
+}
+
+.float {
+	float: left;
+}
+
+.w25 {
+	width: 25%;
+}
+
+.w8 {
+	width: 8%;
+}
+
+.w15 {
+	width: 15%;
+}
+
+.w33 {
+	width: 33.3333%;
+}
+
+.w48 {
+	width: 48%;
+}
+.w50 {
+	width: 50%;
+}
+
+.w100 {
+	width: 100%;
+}
+
+.line {
+	line-height: 15px;
+}

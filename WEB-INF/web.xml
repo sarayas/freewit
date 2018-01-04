@@ -1,0 +1,114 @@
+<web-app>
+
+<!-- ログイン -->
+	<servlet>
+		<servlet-name>loginMapping</servlet-name>
+		<servlet-class>servlet.LoginServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>loginMapping</servlet-name>
+		<url-pattern>/login</url-pattern>
+	</servlet-mapping>
+
+<!-- ログアウト -->
+	<servlet>
+		<servlet-name>logoutMapping</servlet-name>
+		<servlet-class>servlet.LogoutServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>logoutMapping</servlet-name>
+		<url-pattern>/logout</url-pattern>
+	</servlet-mapping>
+
+<!-- ユーザーコントローラ-->
+	<servlet>
+		<servlet-name>userControllerMapping</servlet-name>
+		<servlet-class>servlet.UserControllerServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>userControllerMapping</servlet-name>
+		<url-pattern>/userController</url-pattern>
+	</servlet-mapping>
+
+<!-- コンテンツコントローラ-->
+	<servlet>
+		<servlet-name>contentControllerMapping</servlet-name>
+		<servlet-class>servlet.ContentControllerServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>contentControllerMapping</servlet-name>
+		<url-pattern>/contentController</url-pattern>
+	</servlet-mapping>
+
+<!-- フォローコントローラ-->
+	<servlet>
+		<servlet-name>followControllerMapping</servlet-name>
+		<servlet-class>servlet.FollowControllerServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>followControllerMapping</servlet-name>
+		<url-pattern>/followController</url-pattern>
+	</servlet-mapping>
+
+<!-- privatePage-->
+	<servlet>
+		<servlet-name>privatePageMapping</servlet-name>
+		<servlet-class>servlet.SelectPrivateContentServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>privatePageMapping</servlet-name>
+		<url-pattern>/privatePage</url-pattern>
+	</servlet-mapping>
+
+<!-- contentPage-->
+	<servlet>
+		<servlet-name>contentPageMapping</servlet-name>
+		<servlet-class>servlet.SelectAllContentServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>contentPageMapping</servlet-name>
+		<url-pattern>/contentPage</url-pattern>
+	</servlet-mapping>
+
+<!-- userInfoPage-->
+	<servlet>
+		<servlet-name>selectAllUserMapping</servlet-name>
+		<servlet-class>servlet.SelectAllUserServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>selectAllUserMapping</servlet-name>
+		<url-pattern>/selectAllUser</url-pattern>
+	</servlet-mapping>
+
+<!-- startPage-->
+	<servlet>
+		<servlet-name>startMapping</servlet-name>
+		<servlet-class>servlet.StartServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>startMapping</servlet-name>
+		<url-pattern>/start</url-pattern>
+	</servlet-mapping>
+
+<!-- sandPassword-->
+	<servlet>
+		<servlet-name>sendPasswordMapping</servlet-name>
+		<servlet-class>servlet.SendPasswordServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>sendPasswordMapping</servlet-name>
+		<url-pattern>/sendPassword</url-pattern>
+	</servlet-mapping>
+
+<!-- insertComent-->
+	<servlet>
+		<servlet-name>comentControllerMapping</servlet-name>
+		<servlet-class>servlet.ComentControllerServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>comentControllerMapping</servlet-name>
+		<url-pattern>/comentController</url-pattern>
+	</servlet-mapping>
+
+
+</web-app>

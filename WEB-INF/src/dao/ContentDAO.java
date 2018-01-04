@@ -2,6 +2,7 @@ package dao;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -118,6 +119,53 @@ public class ContentDAO {
 		}
 		return list;
 	}
+
+	public ArrayList<Content> selectById(String id){
+		Connection con = null;
+		PreparedStatement ps = null;
+		ArrayList<Content> list = new ArrayList<Content>();
+		try {
+			con = getconConnection();
+			String sql = "select * from contentinfo where id=? order by contentidx desc";
+			ps = con.prepareStatement(sql);
+			ps.setString(1, id);
+			ResultSet rs = ps.executeQuery();
+			while(rs.next()){
+				Content content = new Content();
+				content.setContentIdx(rs.getString("contentidx"));
+				content.setId(rs.getString("id"));
+				content.setTitle(rs.getString("title"));
+				content.setContent(rs.getString("content"));
+				content.setDate(rs.getString("date"));
+				content.setAuthority(rs.getString("authority"));
+				content.setFilename(rs.getString("filename"));
+				list.add(content);
+			}
+
+
+		} catch (Exception e) {
+			// TODO: handle exception
+		}finally{
+			try {
+				if(ps !=null){
+					ps.close();
+				}
+			} catch (Exception ignore) {
+				// TODO: handle exception
+			}
+			try {
+				if(con !=null){
+					con.close();
+				}
+
+			} catch (Exception ignore) {
+				// TODO: handle exception
+			}
+
+		}
+		return list;
+	}
+
 	public Content SelectByIdx(String idx) {
 		Connection con = null;
 		Statement smt = null;

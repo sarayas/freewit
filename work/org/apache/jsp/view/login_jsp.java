@@ -15,8 +15,7 @@ public final class login_jsp extends org.apache.jasper.runtime.HttpJspBase
   private static java.util.List _jspx_dependants;
 
   static {
-    _jspx_dependants = new java.util.ArrayList(2);
-    _jspx_dependants.add("/common/header.jsp");
+    _jspx_dependants = new java.util.ArrayList(1);
     _jspx_dependants.add("/common/footer.jsp");
   }
 
@@ -99,31 +98,6 @@ public final class login_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t</head>\r\n");
       out.write("\r\n");
       out.write("\t<body style=\"background-image: linear-gradient(to top, #D7D2FF 0%, white 100%);\">\r\n");
-      out.write("\t\t");
-      out.write("\t\n");
-      out.write("\t<style>\n");
-      out.write("\t\t\t.header{\n");
-      out.write("\t\t\t\tposition:fixed;\n");
-      out.write("\t\t\t\ttop:0;\n");
-      out.write("\t\t\t\tleft:0;\n");
-      out.write("\t\t\t\tright:0;\n");
-      out.write("\t\t\t\tbackground-color: #ffffff;\n");
-      out.write("\t\t\t\t}\n");
-      out.write("\t\t</style>\n");
-      out.write("\t\t<div class=\"header\" style=\"background-image: linear-gradient(to top, white 100%, #D7D2FF 0%);\">\n");
-      out.write("\t\t<table align=\"center\">\n");
-      out.write("\t\t\t<tr>\n");
-      out.write("\t\t\t\t<th><IMG SRC=\"");
-      out.print(path );
-      out.write("/imgfile/left.png\" width=\"80px\" height=\"80px\" align=\"left\"></th>\n");
-      out.write("\t\t\t\t<th><h1 align=\"center\" >FreeWit</h1></th>\n");
-      out.write("\t\t\t\t<th><IMG SRC=\"");
-      out.print(path );
-      out.write("/imgfile/right.png\" width=\"80px\" height=\"80px\" align=\"right\"></th>\n");
-      out.write("\t\t\t</tr>\n");
-      out.write("\t\t</table>\n");
-      out.write("\n");
-      out.write("\t\t</div>\n");
       out.write("\r\n");
       out.write("\t\t<div class=\"container\">\r\n");
       out.write("\t\t\t<div class=\"clearfix\">\r\n");

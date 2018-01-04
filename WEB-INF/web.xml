@@ -70,6 +70,16 @@
 		<url-pattern>/contentPage</url-pattern>
 	</servlet-mapping>
 
+<!-- contentPageById-->
+	<servlet>
+		<servlet-name>contentPageByIdMapping</servlet-name>
+		<servlet-class>servlet.SelectByIdContentServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>contentPageByIdMapping</servlet-name>
+		<url-pattern>/contentPageById</url-pattern>
+	</servlet-mapping>
+
 <!-- userInfoPage-->
 	<servlet>
 		<servlet-name>selectAllUserMapping</servlet-name>

@@ -56,6 +56,7 @@ public class SelectPrivateContentServlet extends HttpServlet {
 		ArrayList<Coment> comentList = comentDao.selectComent();
 		request.setAttribute("contentList", ContentList);
 		request.setAttribute("comentList", comentList);
+
 		} catch (IllegalStateException e) {
 			//データベース接続エラーIllegal State Exception でスローした例外をキャッチ
 			error="データベース接続エラーが発生しました。";

@@ -51,7 +51,7 @@
 							</th>
 						</tr>
 						<tr>
-							<th align="center"><%=content.getId()%></th>
+							<th align="center"><a href="<%=path %>/contentPageById?id=<%=content.getId() %>"><%=content.getId()%></a></th>
 							<th colspan="2"><%=content.getDate()%></th>
 						</tr>
 						<tr>

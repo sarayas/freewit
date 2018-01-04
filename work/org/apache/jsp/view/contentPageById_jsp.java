@@ -8,7 +8,7 @@ import dto.Content;
 import dto.User;
 import dto.Coment;
 
-public final class contentPage_jsp extends org.apache.jasper.runtime.HttpJspBase
+public final class contentPageById_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
 
   private static final JspFactory _jspxFactory = JspFactory.getDefaultFactory();
@@ -62,7 +62,6 @@ public final class contentPage_jsp extends org.apache.jasper.runtime.HttpJspBase
       out = pageContext.getOut();
       _jspx_out = out;
 
-      out.write('\r');
       out.write('\n');
 
 	String path = request.getContextPath();
@@ -72,27 +71,27 @@ public final class contentPage_jsp extends org.apache.jasper.runtime.HttpJspBase
 
 	User user = (User) session.getAttribute("user");
 
-      out.write("\r\n");
-      out.write("\r\n");
-      out.write("\r\n");
-      out.write("\r\n");
-      out.write("\r\n");
-      out.write("\r\n");
-      out.write("<html>\r\n");
-      out.write("\t<head>\r\n");
-      out.write("\t\t<meta http-equiv=\"Content-Type\" content=\"text/html; charset=Windows-31J\" />\r\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("<html>\n");
+      out.write("\t<head>\n");
+      out.write("\t\t<meta http-equiv=\"Content-Type\" content=\"text/html; charset=Windows-31J\" />\n");
       out.write("\t\t<link rel=\"stylesheet\" href=\"");
       out.print(path);
-      out.write("/common/div.css\" />\r\n");
-      out.write("\t\t<title>全てのコンテンツ</title>\r\n");
-      out.write("\t\t<script type=\"text/javascript\">\r\n");
-      out.write("\r\n");
-      out.write("\t\tfunction check(){\r\n");
-      out.write("\t\t\treturn confirm(\"コンテンツを削除します。\\nよろしいですか。\");\r\n");
-      out.write("\t\t}\r\n");
-      out.write("\t\t</script>\r\n");
-      out.write("\t\t</head>\r\n");
-      out.write("\t<body style=\"background-image: linear-gradient(to top, #D7D2FF 0%, white 100%);\">\r\n");
+      out.write("/common/div.css\" />\n");
+      out.write("\t\t<title>全てのコンテンツ</title>\n");
+      out.write("\t\t<script type=\"text/javascript\">\n");
+      out.write("\n");
+      out.write("\t\tfunction check(){\n");
+      out.write("\t\t\treturn confirm(\"コンテンツを削除します。\\nよろしいですか。\");\n");
+      out.write("\t\t}\n");
+      out.write("\t\t</script>\n");
+      out.write("\t\t</head>\n");
+      out.write("\t<body style=\"background-image: linear-gradient(to top, #D7D2FF 0%, white 100%);\">\n");
       out.write("\t\t");
       out.write("\t\n");
       out.write("\t<style>\n");
@@ -118,13 +117,15 @@ public final class contentPage_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t\t</table>\n");
       out.write("\n");
       out.write("\t\t</div>\n");
-      out.write("\r\n");
-      out.write("\t\t");
+      out.write('\n');
+      out.write('	');
+      out.write('	');
 
 			if (user.getAuthority().equals("1")) {
 		
-      out.write("\r\n");
-      out.write("\t\t");
+      out.write('\n');
+      out.write('	');
+      out.write('	');
       out.write("\t\n");
       out.write("\n");
       out.write("<div style=\"float: left; position: fixed; margin-left: 40;\">\n");
@@ -153,13 +154,15 @@ public final class contentPage_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\n");
       out.write("</ul>\n");
       out.write("</div>\n");
-      out.write("\r\n");
-      out.write("\t\t");
+      out.write('\n');
+      out.write('	');
+      out.write('	');
 
 			} else {
 		
-      out.write("\r\n");
-      out.write("\t\t");
+      out.write('\n');
+      out.write('	');
+      out.write('	');
       out.write("\t\r\n");
       out.write("\r\n");
       out.write("<script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js\"></script>\r\n");
@@ -217,236 +220,234 @@ public final class contentPage_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t</div>\r\n");
       out.write("\r\n");
       out.write("</div>\r\n");
-      out.write("\r\n");
-      out.write("\t\t");
+      out.write('\n');
+      out.write('	');
+      out.write('	');
 
 			}
 		
-      out.write("\r\n");
-      out.write("\r\n");
-      out.write("\t\t<div class=\"container\">\r\n");
-      out.write("\t\t\t<h2 align=\"center\">全てのコンテンツ</h2>\r\n");
-      out.write("\t\t\t<hr color=\"#000000\" />\r\n");
-      out.write("\t\t\t<div class=\"clearfix\">\r\n");
-      out.write("\t\t\t<div class=\"float-left\" style=\"width: 20%;\">\r\n");
-      out.write("\t\t\t<p></p>\r\n");
-      out.write("\t\t\t</div>\r\n");
-      out.write("\t\t\t<div align=\"center\" class=\"float-left\" style=\"width: 60%;\">\r\n");
-      out.write("\t\t\t<table bordercolor=\"#000000\">\r\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\t\t<div class=\"container\">\n");
+      out.write("\t\t\t<h2 align=\"center\">");
+      out.print(contentList.get(0).getId() );
+      out.write("様のコンテンツ</h2>\n");
+      out.write("\t\t\t<hr color=\"#000000\" />\n");
+      out.write("\t\t\t<div class=\"clearfix\">\n");
+      out.write("\t\t\t<div class=\"float-left\" style=\"width: 20%;\">\n");
+      out.write("\t\t\t<p></p>\n");
+      out.write("\t\t\t</div>\n");
+      out.write("\t\t\t<div align=\"center\" class=\"float-left\" style=\"width: 60%;\">\n");
+      out.write("\t\t\t<table bordercolor=\"#000000\">\n");
       out.write("\t\t\t\t");
 
 					for (int i = 0; i < contentList.size(); i++) {
 						Content content = contentList.get(i);
 				
-      out.write("\r\n");
-      out.write("\t\t\t\t<tr>\r\n");
-      out.write("\t\t\t\t\t<th width=\"300\" bgcolor=\"#B5B4FF\">\r\n");
-      out.write("\t\t\t\t\t<p>作 成 者</p>\r\n");
-      out.write("\t\t\t\t\t</th>\r\n");
-      out.write("\t\t\t\t\t<th width=\"300\" bgcolor=\"#B5B4FF\" colspan=\"2\">\r\n");
-      out.write("\t\t\t\t\t<p>作 成 日</p>\r\n");
-      out.write("\t\t\t\t\t</th>\r\n");
-      out.write("\t\t\t\t</tr>\r\n");
-      out.write("\t\t\t\t<tr>\r\n");
-      out.write("\t\t\t\t\t<th align=\"center\"><a href=\"");
-      out.print(path );
-      out.write("/contentPageById?id=");
-      out.print(content.getId() );
-      out.write('"');
-      out.write('>');
+      out.write("\n");
+      out.write("\t\t\t\t<tr>\n");
+      out.write("\t\t\t\t\t<th width=\"300\" bgcolor=\"#B5B4FF\">\n");
+      out.write("\t\t\t\t\t<p>作 成 者</p>\n");
+      out.write("\t\t\t\t\t</th>\n");
+      out.write("\t\t\t\t\t<th width=\"300\" bgcolor=\"#B5B4FF\" colspan=\"2\">\n");
+      out.write("\t\t\t\t\t<p>作 成 日</p>\n");
+      out.write("\t\t\t\t\t</th>\n");
+      out.write("\t\t\t\t</tr>\n");
+      out.write("\t\t\t\t<tr>\n");
+      out.write("\t\t\t\t\t<th align=\"center\">");
       out.print(content.getId());
-      out.write("</a>&nbsp;&nbsp;&nbsp; ");
+      out.write("&nbsp;&nbsp;&nbsp; ");
 
 			 	if (!user.getId().equals(content.getId())
 			 				&& followList.indexOf(content.getId()) == -1
 			 				&& (Integer.parseInt(content.getAuthority()) > 1)
 			 				&& !user.getAuthority().equals("1")) {
 			 
-      out.write("\r\n");
+      out.write("\n");
       out.write("\t\t\t\t\t<form action=\"");
       out.print(path);
-      out.write("/followController\" method=\"post\"><input\r\n");
+      out.write("/followController\" method=\"post\"><input\n");
       out.write("\t\t\t\t\t\ttype=\"hidden\" name=\"follow\" value=\"");
       out.print(content.getId());
-      out.write("\" /> <input\r\n");
-      out.write("\t\t\t\t\t\ttype=\"hidden\" name=\"fCmd\" value=\"1\" /> <input type=\"submit\"\r\n");
-      out.write("\t\t\t\t\t\tvalue=\"フォローする\" ;/></form>\r\n");
+      out.write("\" /> <input\n");
+      out.write("\t\t\t\t\t\ttype=\"hidden\" name=\"fCmd\" value=\"1\" /> <input type=\"submit\"\n");
+      out.write("\t\t\t\t\t\tvalue=\"フォローする\" ;/></form>\n");
       out.write("\t\t\t\t\t");
 
 						}
 					
-      out.write("\r\n");
-      out.write("\t\t\t\t\t</th>\r\n");
+      out.write("\n");
+      out.write("\t\t\t\t\t</th>\n");
       out.write("\t\t\t\t\t<th colspan=\"2\">");
       out.print(content.getDate());
-      out.write("</th>\r\n");
-      out.write("\t\t\t\t</tr>\r\n");
-      out.write("\t\t\t\t<tr>\r\n");
-      out.write("\t\t\t\t\t<th bgcolor=\"#B5B4FF\">タイトル</th>\r\n");
+      out.write("</th>\n");
+      out.write("\t\t\t\t</tr>\n");
+      out.write("\t\t\t\t<tr>\n");
+      out.write("\t\t\t\t\t<th bgcolor=\"#B5B4FF\">タイトル</th>\n");
       out.write("\t\t\t\t\t<td colspan=\"2\" bgcolor=\"#DAD9FF\" >");
       out.print(content.getTitle());
-      out.write("</td>\r\n");
-      out.write("\t\t\t\t</tr>\r\n");
-      out.write("\t\t\t\t<tr>\r\n");
+      out.write("</td>\n");
+      out.write("\t\t\t\t</tr>\n");
+      out.write("\t\t\t\t<tr>\n");
       out.write("\t\t\t\t\t<td colspan=\"3\" align=\"center\">");
 if(!content.getFilename().equals("")){ 
-      out.write("\r\n");
+      out.write("\n");
       out.write("\t\t\t\t\t<img src=\"");
       out.print(path );
       out.write("/upload/");
       out.print( content.getFilename());
       out.write("\"><br>");
 }
-      out.write("\r\n");
+      out.write("\n");
       out.write("\t\t\t\t\t");
       out.print(content.getContent() );
-      out.write("\r\n");
-      out.write("\t\t\t\t\t</td>\r\n");
-      out.write("\t\t\t\t</tr>\r\n");
-      out.write("\r\n");
+      out.write("\n");
+      out.write("\t\t\t\t\t</td>\n");
+      out.write("\t\t\t\t</tr>\n");
+      out.write("\n");
       out.write("\t\t\t\t");
 
 					if (user.getId().equals(content.getId())) {
 				
-      out.write("\r\n");
-      out.write("\t\t\t\t<tr>\r\n");
-      out.write("\t\t\t\t\t<td align=\"center\" colspan=\"3\">\r\n");
-      out.write("\t\t\t\t\t<div class=\"clearfix\">\r\n");
-      out.write("\t\t\t\t\t\t<div class=\"float-left w50\">\r\n");
+      out.write("\n");
+      out.write("\t\t\t\t<tr>\n");
+      out.write("\t\t\t\t\t<td align=\"center\" colspan=\"3\">\n");
+      out.write("\t\t\t\t\t<div class=\"clearfix\">\n");
+      out.write("\t\t\t\t\t\t<div class=\"float-left w50\">\n");
       out.write("\t\t\t\t\t\t\t<form action=\"");
       out.print(path);
-      out.write("/view/contentModi.jsp\" method=\"post\" ><input\r\n");
+      out.write("/view/contentModi.jsp\" method=\"post\" ><input\n");
       out.write("\t\t\t\t\t\t\t\ttype=\"hidden\" name=\"idx\" value=\"");
       out.print(content.getContentIdx());
-      out.write("\">\r\n");
-      out.write("\t\t\t\t\t\t\t<input type=\"submit\" value=\"コンテンツ修正\"></form>\r\n");
-      out.write("\t\t\t\t\t\t</div>\r\n");
-      out.write("\t\t\t\t\t\t<div class=\"float-left w50\">\r\n");
+      out.write("\">\n");
+      out.write("\t\t\t\t\t\t\t<input type=\"submit\" value=\"コンテンツ修正\"></form>\n");
+      out.write("\t\t\t\t\t\t</div>\n");
+      out.write("\t\t\t\t\t\t<div class=\"float-left w50\">\n");
       out.write("\t\t\t\t\t\t\t<form name=\"delete\" action=\"");
       out.print(path);
-      out.write("/contentController\" method=\"post\" enctype=\"multipart/form-data\" onsubmit=\"return check()\">\r\n");
+      out.write("/contentController\" method=\"post\" enctype=\"multipart/form-data\" onsubmit=\"return check()\">\n");
       out.write("\t\t\t\t\t\t\t<input type=\"hidden\" name=\"idx\" value=\"");
       out.print(content.getContentIdx());
-      out.write("\">\r\n");
-      out.write("\t\t\t\t\t\t\t<input type=\"hidden\" name=\"cCmd\" value=\"3\">\r\n");
-      out.write("\t\t\t\t\t\t\t<input type=\"submit\" value=\"コンテンツ削除\"></form>\r\n");
-      out.write("\t\t\t\t\t\t</div>\r\n");
-      out.write("\t\t\t\t\t</div>\r\n");
-      out.write("\t\t\t\t\t</td>\r\n");
-      out.write("\t\t\t\t</tr>\r\n");
+      out.write("\">\n");
+      out.write("\t\t\t\t\t\t\t<input type=\"hidden\" name=\"cCmd\" value=\"3\">\n");
+      out.write("\t\t\t\t\t\t\t<input type=\"submit\" value=\"コンテンツ削除\"></form>\n");
+      out.write("\t\t\t\t\t\t</div>\n");
+      out.write("\t\t\t\t\t</div>\n");
+      out.write("\t\t\t\t\t</td>\n");
+      out.write("\t\t\t\t</tr>\n");
       out.write("\t\t\t\t");
 
 					}
 						if (!user.getId().equals(content.getId())&&user.getAuthority().equals("1")) {
 				
-      out.write("\r\n");
-      out.write("\t\t\t\t<tr>\r\n");
-      out.write("\t\t\t\t\t<td colspan=\"3\" align=\"center\">\r\n");
+      out.write("\n");
+      out.write("\t\t\t\t<tr>\n");
+      out.write("\t\t\t\t\t<td colspan=\"3\" align=\"center\">\n");
       out.write("\t\t\t\t\t<form name=\"delete\" action=\"");
       out.print(path);
-      out.write("/contentController\" method=\"post\" enctype=\"multipart/form-data\" onsubmit=\"return check()\">\r\n");
+      out.write("/contentController\" method=\"post\" enctype=\"multipart/form-data\" onsubmit=\"return check()\">\n");
       out.write("\t\t\t\t\t<input type=\"hidden\" name=\"idx\" value=\"");
       out.print(content.getContentIdx());
-      out.write("\">\r\n");
-      out.write("\t\t\t\t\t<input type=\"hidden\" name=\"cCmd\" value=\"3\">\r\n");
-      out.write("\t\t\t\t\t<input type=\"submit\" value=\"コンテンツ削除\"></form>\r\n");
-      out.write("\t\t\t\t\t</td>\r\n");
-      out.write("\t\t\t\t</tr>\r\n");
+      out.write("\">\n");
+      out.write("\t\t\t\t\t<input type=\"hidden\" name=\"cCmd\" value=\"3\">\n");
+      out.write("\t\t\t\t\t<input type=\"submit\" value=\"コンテンツ削除\"></form>\n");
+      out.write("\t\t\t\t\t</td>\n");
+      out.write("\t\t\t\t</tr>\n");
       out.write("\t\t\t\t");
 
 					}
 						
-      out.write("\r\n");
-      out.write("\t\t\t\t<tr>\r\n");
+      out.write("\n");
+      out.write("\t\t\t\t<tr>\n");
       out.write("\t\t\t\t\t<td>");
       out.print(user.getId() );
-      out.write("</td>\r\n");
-      out.write("\t\t\t\t\t<td>\r\n");
+      out.write("</td>\n");
+      out.write("\t\t\t\t\t<td>\n");
       out.write("\t\t\t\t<form action=\"");
       out.print(path );
-      out.write("/comentController\" method=\"post\">\r\n");
-      out.write("\t\t\t\t\t<textarea name=\"coment\" cols=\"55\"></textarea>\r\n");
+      out.write("/comentController\" method=\"post\">\n");
+      out.write("\t\t\t\t\t<textarea name=\"coment\" cols=\"55\"></textarea>\n");
       out.write("\t\t\t\t\t<input type=\"hidden\" name=\"contentIdx\" value=\"");
       out.print(content.getContentIdx() );
-      out.write("\"/>\r\n");
+      out.write("\"/>\n");
       out.write("\t\t\t\t\t<input type=\"hidden\" name=\"id\" value=\"");
       out.print(user.getId() );
-      out.write("\"/>\r\n");
-      out.write("\t\t\t\t\t<input type=\"hidden\" name=\"cCmd\" value=\"1\"/>\r\n");
-      out.write("\t\t\t\t\t</td>\r\n");
-      out.write("\t\t\t\t\t<td><input type=\"submit\" value=\"コメントを残す\"></td>\r\n");
-      out.write("\t\t\t\t</form>\r\n");
-      out.write("\t\t\t\t</tr>\r\n");
+      out.write("\"/>\n");
+      out.write("\t\t\t\t\t<input type=\"hidden\" name=\"cCmd\" value=\"1\"/>\n");
+      out.write("\t\t\t\t\t</td>\n");
+      out.write("\t\t\t\t\t<td><input type=\"submit\" value=\"コメントを残す\"></td>\n");
+      out.write("\t\t\t\t</form>\n");
+      out.write("\t\t\t\t</tr>\n");
       out.write("\t\t\t\t");
 
 					for(int j=0; j<comentList.size(); j++){
 					Coment coment = comentList.get(j);
 					if(coment.getContentIdx().equals(content.getContentIdx())){
 					
-      out.write("\r\n");
-      out.write("\t\t\t\t<tr align=\"center\">\r\n");
+      out.write("\n");
+      out.write("\t\t\t\t<tr align=\"center\">\n");
       out.write("\t\t\t\t\t<td width=\"20%\" bgcolor=\"#D6C7ED\">");
       out.print(coment.getId() );
-      out.write("</td>\r\n");
+      out.write("</td>\n");
       out.write("\t\t\t\t\t<td width=\"60%\" bgcolor=\"#E8D9FF\">");
       out.print(coment.getContent() );
-      out.write("</td>\r\n");
+      out.write("</td>\n");
       out.write("\t\t\t\t\t<td width=\"20%\" bgcolor=\"#D6C7ED\">");
       out.print(coment.getDate() );
-      out.write("\r\n");
+      out.write("\n");
       out.write("\t\t\t\t");
 if(user.getId().equals(coment.getId())){ 
-      out.write("\r\n");
+      out.write("\n");
       out.write("\t\t\t\t<form action=\"");
       out.print(path );
-      out.write("/comentController\" method=\"post\">\r\n");
+      out.write("/comentController\" method=\"post\">\n");
       out.write("\t\t\t\t\t<input type=\"hidden\" name=\"contentIdx\" value=\"");
       out.print(content.getContentIdx() );
-      out.write("\"/>\r\n");
+      out.write("\"/>\n");
       out.write("\t\t\t\t\t<input type=\"hidden\" name=\"id\" value=\"");
       out.print(user.getId() );
-      out.write("\"/>\r\n");
+      out.write("\"/>\n");
       out.write("\t\t\t\t\t<input type=\"hidden\" name=\"coment\" value=\"");
       out.print(coment.getContent() );
-      out.write("\"/>\r\n");
-      out.write("\t\t\t\t\t<input type=\"hidden\" name=\"cCmd\" value=\"2\"/>\r\n");
-      out.write("\t\t\t\t\t<input type=\"submit\" value=\"削除\">\r\n");
-      out.write("\t\t\t\t\t</form>\r\n");
+      out.write("\"/>\n");
+      out.write("\t\t\t\t\t<input type=\"hidden\" name=\"cCmd\" value=\"2\"/>\n");
+      out.write("\t\t\t\t\t<input type=\"submit\" value=\"削除\">\n");
+      out.write("\t\t\t\t\t</form>\n");
       out.write("\t\t\t\t\t");
 } 
-      out.write("\r\n");
-      out.write("\t\t\t\t\t</td>\r\n");
-      out.write("\t\t\t\t</tr>\r\n");
-      out.write("\r\n");
+      out.write("\n");
+      out.write("\t\t\t\t\t</td>\n");
+      out.write("\t\t\t\t</tr>\n");
+      out.write("\n");
       out.write("\t\t\t\t");
 	}
 					}
 					
-      out.write("\r\n");
-      out.write("\t\t\t\t\t<tr><td colspan=\"3\" bgcolor=\"#000000\"></td></tr>\r\n");
+      out.write("\n");
+      out.write("\t\t\t\t\t<tr><td colspan=\"3\" bgcolor=\"#000000\"></td></tr>\n");
       out.write("\t\t\t\t\t");
 
 					}
 						
-      out.write("\r\n");
-      out.write("\t\t\t</table>\r\n");
-      out.write("\t\t\t</div>\r\n");
+      out.write("\n");
+      out.write("\t\t\t</table>\n");
+      out.write("\t\t\t</div>\n");
       out.write("\t\t\t<div class=\"float-left\" style=\"width: 20%\">フォローしたユーザー ");
 
 				for (int i = 0; i < followList.size(); i++) {
 			
-      out.write("\r\n");
+      out.write("\n");
       out.write("\t\t\t<p>");
       out.print(followList.get(i));
-      out.write("</p>\r\n");
+      out.write("</p>\n");
       out.write("\t\t\t");
 
 				}
 			
-      out.write("\r\n");
-      out.write("\t\t\t</div>\r\n");
-      out.write("\t\t\t</div>\r\n");
-      out.write("\t\t</div>\r\n");
+      out.write("\n");
+      out.write("\t\t\t</div>\n");
+      out.write("\t\t\t</div>\n");
+      out.write("\t\t</div>\n");
       out.write("\t\t");
       out.write("\n");
       out.write("\t\t<style>\n");
@@ -463,9 +464,9 @@ if(user.getId().equals(coment.getId())){
       out.write("\t\t\t<hr size=\"4\" color=\"#000000\" />\n");
       out.write("\t\t\tCopyright(C)2017 All Right Reserved.\n");
       out.write("\t\t</div>");
-      out.write("\r\n");
-      out.write("\t</body>\r\n");
-      out.write("</html>\r\n");
+      out.write("\n");
+      out.write("\t</body>\n");
+      out.write("</html>\n");
     } catch (Throwable t) {
       if (!(t instanceof SkipPageException)){
         out = _jspx_out;

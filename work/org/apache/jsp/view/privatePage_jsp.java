@@ -202,9 +202,14 @@ public final class privatePage_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t\t\t\t\t\t\t</th>\r\n");
       out.write("\t\t\t\t\t\t</tr>\r\n");
       out.write("\t\t\t\t\t\t<tr>\r\n");
-      out.write("\t\t\t\t\t\t\t<th align=\"center\">");
+      out.write("\t\t\t\t\t\t\t<th align=\"center\"><a href=\"");
+      out.print(path );
+      out.write("/contentPageById?id=");
+      out.print(content.getId() );
+      out.write('"');
+      out.write('>');
       out.print(content.getId());
-      out.write("</th>\r\n");
+      out.write("</a></th>\r\n");
       out.write("\t\t\t\t\t\t\t<th colspan=\"2\">");
       out.print(content.getDate());
       out.write("</th>\r\n");

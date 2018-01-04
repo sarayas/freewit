@@ -224,13 +224,13 @@ for(int j=0; j<comentList.size(); j++){
       out.write("\t\t\t\t");
 	}
 					}
-				
+					
       out.write("\r\n");
-      out.write("\r\n");
+      out.write("\t\t\t\t\t<tr><td colspan=\"3\" bgcolor=\"#000000\"></td></tr>\r\n");
       out.write("\t\t\t\t\t");
 
-						}
-					
+					}
+						
       out.write("\r\n");
       out.write("\t\t\t\t</table>\r\n");
       out.write("\t\t</div>\r\n");

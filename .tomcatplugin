@@ -7,5 +7,5 @@
     <updateXml>true</updateXml>
     <warLocation></warLocation>
     <extraInfo></extraInfo>
-    <webPath>/FreeWit_KwonOSeong</webPath>
+    <webPath>/freewit</webPath>
 </tomcatProjectProperties>

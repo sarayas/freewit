@@ -1,3 +1,9 @@
+/*FreeWit SNS System
+ * 作成者：権　五聖
+ * 最終修正日：2018年1月4日
+ *
+ * コンテンツの入力、削除を管理するサーブレット*/
+
 package servlet;
 
 import java.io.File;
@@ -20,38 +26,50 @@ public class ContentControllerServlet extends HttpServlet {
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
+
+		//日本語利用の為のエンコーディング
 		response.setContentType("text/html; charset=Windows-31J");
 		request.setCharacterEncoding("Windows-31J");
 
+		//エラー判別の為の変数
 		String error=null;
 		String errorCmd="";
+
+		//例外処理
 		try {
+			//session check
 			HttpSession session = request.getSession();
 			User user = (User) session.getAttribute("user");
+
+			//ログインセッションが切れた例外処理
 			if(user == null){
 				error="セッション切れの為、ログイン画面に戻ります。";
 				errorCmd="login";
 				return;
 			}
+
 			//file max size
 			int maxPostSize = 10 * 1024 * 1024;
+
 			//save directory(paht)
 			String saveDirectory = getServletContext().getRealPath("/upload");
+
 			//mautlpart object
 			MultipartRequest multi = new MultipartRequest(request, saveDirectory, maxPostSize, "Windows-31J");
 
 
-			int cCmd = Integer.parseInt(multi.getParameter("cCmd"));
-			ContentDAO contentDao = new ContentDAO();
-			Content contentObj = new Content();
+			//変数の宣言
+			int cCmd = Integer.parseInt(multi.getParameter("cCmd"));		//処理の種類を判断するCMD
+			ContentDAO contentDao = new ContentDAO();						//DAOオブジェクト
+			Content contentObj = new Content();								//DTOオブジェクト
+
+		     Enumeration formNames=multi.getFileNames();					//マルチパトオブジェクト
+		     String title = multi.getParameter("title");					//コンテンツタイトル
+		     String content = multi.getParameter("content");				//コンテンツ内容
+		     String idx = multi.getParameter("idx");						//コンテンツインデックス
 
 
-		     Enumeration formNames=multi.getFileNames();
-		     String title = multi.getParameter("title");
-		     String content = multi.getParameter("content");
-		     String idx = multi.getParameter("idx");
-
-
+		     //ファウルの情報及びアプデート
 		     String fileInput = "";
 		     String fileName = "";
 		     String type = "";
@@ -80,9 +98,10 @@ public class ContentControllerServlet extends HttpServlet {
 		          }
 		     }
 
-			//////////
+
 
 			switch (cCmd) {
+
 				//insert
 			case 1:
 
@@ -96,6 +115,7 @@ public class ContentControllerServlet extends HttpServlet {
 				break;
 
 			case 2:
+
 				//update
 
 				if(contentDao.SelectByIdx(idx).getId() == null){
@@ -121,10 +141,12 @@ public class ContentControllerServlet extends HttpServlet {
 				break;
 			}
 		} catch (IllegalStateException e) {
+			//データベース接続エラーIllegal State Exception でスローした例外をキャッチ
 			error="データベース接続エラーが発生しました。";
 			errorCmd="login";
 
 		}finally{
+			//最後の処理request,responsesを他のサーブレット、ページに伝送する
 			if (error != null) {
 				request.setAttribute("error", error);
 				request.setAttribute("errorCmd", errorCmd);

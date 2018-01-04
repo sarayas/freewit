@@ -17,6 +17,7 @@ public class LoginServlet extends HttpServlet {
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
+		//日本語利用の為のエンコーディング
 		response.setContentType("text/html; charset=Windows-31J");
 		request.setCharacterEncoding("Windows-31J");
 
@@ -45,9 +46,12 @@ public class LoginServlet extends HttpServlet {
 			session.setAttribute("user", user);
 			session.setAttribute("followList", followList);
 		} catch (IllegalStateException e) {
+			//データベース接続エラーIllegal State Exception でスローした例外をキャッチ
 			error="データベース接続エラーが発生しました。";
 			errorCmd="login";
 		} finally {
+			//最後の処理request,responsesを他のサーブレット、ページに伝送する
+
 			if (error != null) {
 				request.setAttribute("error", error);
 				request.setAttribute("errorCmd", errorCmd);

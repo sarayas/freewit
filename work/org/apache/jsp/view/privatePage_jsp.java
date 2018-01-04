@@ -260,6 +260,9 @@ if(!content.getFilename().equals("")){
       out.write("\t\t\t\t\t\t\t<input type=\"submit\" value=\"ƒRƒ“ƒeƒ“ƒcíœ\"></form>\r\n");
       out.write("\t\t\t\t\t\t</div>\r\n");
       out.write("\t\t\t\t\t</div>\r\n");
+      out.write("\t\t\t\t\t");
+} 
+      out.write("\r\n");
       out.write("\t\t\t\t\t</td>\r\n");
       out.write("\t\t\t\t\t\t</tr>\r\n");
       out.write("\t\t\t\t\t\t<tr>\r\n");
@@ -284,7 +287,7 @@ if(!content.getFilename().equals("")){
       out.write("\t\t\t\t</tr>\r\n");
       out.write("\t\t\t\t\t\t");
 
-							}
+
 					for(int j=0; j<comentList.size(); j++){
 					Coment coment = comentList.get(j);
 					if(coment.getContentIdx().equals(content.getContentIdx())){

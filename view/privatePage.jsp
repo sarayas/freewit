@@ -83,6 +83,7 @@
 							<input type="submit" value="ƒRƒ“ƒeƒ“ƒcíœ"></form>
 						</div>
 					</div>
+					<%} %>
 					</td>
 						</tr>
 						<tr>
@@ -98,7 +99,7 @@
 				</form>
 				</tr>
 						<%
-							}
+
 					for(int j=0; j<comentList.size(); j++){
 					Coment coment = comentList.get(j);
 					if(coment.getContentIdx().equals(content.getContentIdx())){
